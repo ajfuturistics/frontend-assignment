@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const TabOne = ({ userDetails }) => {
   return (
-    <section className="w-full grid grid-cols-[0.8fr_1.2fr] h-96">
+    <section className="w-full grid grid-cols-[0.8fr_0.01fr_1.1fr] h-96">
       <div className="w-full h-full flex flex-col justify-center items-center gap-2 p-10">
         <img
           src={userDetails?.profilepicture}
@@ -71,6 +71,7 @@ const TabOne = ({ userDetails }) => {
           </p>
         </div>
       </div>
+      <div className="h-[70vh] w-[2px] my-10 bg-gray-400"></div>
       <div className="w-full h-full flex flex-col gap-2 p-10">
         <h3 className="text-gray-400 font-semibold text-start">Address :</h3>
 
@@ -102,7 +103,7 @@ const TabOne = ({ userDetails }) => {
         </div>
 
         <div className="pt-4 px-6 pb-0">
-          <iframe
+          {/* <iframe
             key={`map-user-${userDetails?.id}`}
             // src={`//maps.google.com/maps?q=${userDetails?.address?.geo?.lat},${userDetails?.address?.geo?.lng}&z=zoom&output=embed`}
             src={`https://maps.google.com/maps?q=${userDetails?.address?.geo?.lat},${userDetails?.address?.geo?.lng}&hl=es;z=14&output=embed`}
@@ -110,7 +111,8 @@ const TabOne = ({ userDetails }) => {
             height="300"
             style={{ border: 0 }}
             allowFullScreen
-          ></iframe>
+          ></iframe> */}
+          <img src="/map.png" alt="map" className="w-full rounded-3xl" />
         </div>
         <div className="px-6 flex justify-end gap-4">
           <p className="text-gray-400">

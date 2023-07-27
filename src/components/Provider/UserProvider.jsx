@@ -7,6 +7,7 @@ import axios from "axios";
 export function UserProvider({ children }) {
   const [users, setUsers] = useState([]);
   const [activeTab, setActiveTab] = useState(0);
+  const [userChatId, setUserChatId] = useState(null);
 
   useEffect(() => {
     const getUsers = () => {
@@ -34,7 +35,14 @@ export function UserProvider({ children }) {
 
   return (
     <UserContext.Provider
-      value={{ getUserById, users, activeTab, setActiveTab }}
+      value={{
+        getUserById,
+        users,
+        activeTab,
+        setActiveTab,
+        userChatId,
+        setUserChatId,
+      }}
     >
       {children}
     </UserContext.Provider>

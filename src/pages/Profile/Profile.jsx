@@ -4,22 +4,27 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 import ProfileNav from "../../components/ProfileNav/ProfileNav";
 import TabOne from "../../components/Tabs/TabOne";
 import TabSoon from "../../components/Tabs/TabSoon";
+import ChatBox from "../../components/ChatBox/ChatBox";
+import UserChat from "../../components/UserChat/UserChat";
 
 const Profile = () => {
   const { userId } = useParams();
-  const { getUserById, activeTab } = useGlobalState();
+  const { getUserById, activeTab, userChatId } = useGlobalState();
   const userDetails = getUserById(userId);
-  console.log(userDetails);
 
   return (
     <div className="relative flex p-4">
       <Sidebar />
-      <div className="w-full p-4">
+      <div className="h-full w-2 py-6"></div>
+      <div className="w-full px-4">
         <ProfileNav userDetails={userDetails} />
 
         {activeTab === 0 && <TabOne userDetails={userDetails} />}
         {activeTab !== 0 && <TabSoon />}
       </div>
+
+      <ChatBox userId={userDetails?.id} />
+      {userChatId && <UserChat />}
     </div>
   );
 };
