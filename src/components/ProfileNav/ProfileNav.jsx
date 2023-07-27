@@ -8,7 +8,7 @@ const ProfileNav = ({ userDetails }) => {
   const { users } = useGlobalState();
   return (
     <nav className="relative">
-      <div className="flex justify-between items-center px-2 border-b-[2px] border-gray-200 pt-2 pb-4">
+      <div className="flex justify-between items-center px-2 border-b-[2px] border-gray-200 pb-2">
         <h3 className="text-2xl font-semibold">Profile</h3>
         <div className="my-2 relative">
           <div
