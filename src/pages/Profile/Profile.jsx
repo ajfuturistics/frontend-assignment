@@ -15,7 +15,7 @@ const Profile = () => {
   return (
     <div className="relative flex p-4">
       <Sidebar />
-      <div className="h-full w-2 py-6"></div>
+
       <div className="w-full px-4">
         <ProfileNav userDetails={userDetails} />
 

@@ -5,7 +5,7 @@ function App() {
   const { users } = useGlobalState();
   return (
     <div className="relative flex justify-center items-center min-h-screen">
-      <div className="overflow-hidden absolute top-0 right-0 -z-10 w-full">
+      <div className="overflow-hidden absolute top-0 right-0 -z-10 w-full h-screen">
         <svg
           id="visual"
           viewBox="0 0 900 600"
